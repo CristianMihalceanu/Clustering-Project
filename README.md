@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-1. Using both "The elbow method" and "The Dendrogram Approach", we were able to determine that tennis players can roughly be categorized in 4 different clusters
+1. Using both "The elbow method" and "The Dendrogram Approach", we were able to determine that tennis players can roughly be categorized in 4 different clusters, which is useful for developing a winning stategy against an opponent, provided we know which cluster he/she belongs to
 2. We created 4 dataframes from the original data, each row representing the performance of a player during a match
 3. Gathered a better understanding of the data through EDA
 4. Applied PCA to visualize the data in 2D
@@ -19,13 +19,13 @@
  
 Data collected from UCI machine learning repository
  
-1. Result Result of the match (0/1) 
+Result Result of the match (0/1) 
 
-2. FSP = First Serve Percentage for player  (Real Number)
+FSP = First Serve Percentage for player  (Real Number)
 
-3. FSW = First Serve Won by player  (Real Number)
+FSW = First Serve Won by player  (Real Number)
 
-4. SSP = Second Serve Percentage for player  (Real Number)
+SSP = Second Serve Percentage for player  (Real Number)
 
 SSW = Second Serve Won by player (Real Number)
 
@@ -45,31 +45,31 @@ NPA = Net Points Attempted by player  (Numeric)
 
 NPW = Net Points Won by player  (Numeric)
  
- ## Feature Generation
+ ## Data Preprocessing
  
- 1. Transformed "Time" column into a datetime object so that we can call attributes off of the elements.
- 2. We added another columns consisting of the lengths of the messages
- 3. Dropped columns which were no longer useful
- 4. Checked if there were any blank texts
- 
+ 1. Concatenated the dataframes together
+ 2. Renamed the columns 
+ 3. Changed row indices
+
  ## EDA
  
  A sneak peak from inside the project:
  
- ![alt text](https://github.com/CristianMihalceanu/NLP-Project/blob/main/length.PNG)
+ ![alt text](https://github.com/CristianMihalceanu/Clustering-Project/blob/main/corr.PNG)
  
- ![alt text](https://github.com/CristianMihalceanu/NLP-Project/blob/main/wordcloud.PNG)
+ ![alt text](https://github.com/CristianMihalceanu/Clustering-Project/blob/main/linear%20dependence.PNG)
  
- ## Text Generation
+  ![alt text](https://github.com/CristianMihalceanu/Clustering-Project/blob/main/pca%20result.PNG)
+
  
- 1. Provided a brief explanation of RNN and LSTM
- 2. Created a neural network and used backpropagation to train it on our data in order to generate a new word based off of 50 previous ones
+ ## Model Building
  
- ## Model Performance 
+ 1. Applied "The elbow method" and "The Dendrogram Approach"
+ 2. Implemented KMeans algorithm which provided us with the data separated in 4 clusters
+ 3. We later interpreted the results to develop stategies for future games
  
- Our model for predicting whether a person suffers from depression achieved 75% accuracy
  
  ## Future Work
  
- Following the result of the algorithm, an individual should be adviced to visit a professional psychologist or be provided a chatbot.
+ Following the result of the algorithm, a strategy should be put together alongside the coach in order to develop a winning system against players fom each of the clusters
  
